@@ -1,0 +1,69 @@
+{
+    "name": "ELEGOO Extruder Base",
+    "version": 2,
+    "inherits": "fdmextruder",   
+    "metadata":
+    {
+        "type": "elegoo_extruder_base",
+        "author": "NARUTO",
+        "manufacturer": "ELEGOO"
+    },
+    "settings":
+    {
+                "machine_extruder_start_code_0":
+                {
+                    "label": "Extruder Start G-Code",
+                    "description": "Start g-code to execute when switching to this extruder.",
+                    "type": "str",
+                    "default_value": "",
+                    "settable_per_mesh": false,
+                    "settable_per_extruder": true,
+                    "settable_per_meshgroup": false,
+                    "settable_globally": false
+                },
+                "machine_extruder_start_code_1":
+                {
+                    "label": "Extruder Start G-Code",
+                    "description": "Start g-code to execute when switching to this extruder.",
+                    "type": "str",
+                    "default_value": "G1 E100 F1200\nG92 E0\n;Please do not change the upon code",
+                    "settable_per_mesh": false,
+                    "settable_per_extruder": true,
+                    "settable_per_meshgroup": false,
+                    "settable_globally": false
+                },
+                "machine_extruder_end_code_0":
+                {
+                    "label": "Extruder End G-Code",
+                    "description": "End g-code to execute when switching away from this extruder.",
+                    "type": "str",
+                    "default_value": "",
+                    "settable_per_mesh": false,
+                    "settable_per_extruder": true,
+                    "settable_per_meshgroup": false,
+                    "settable_globally": false
+                },
+                "machine_extruder_end_code_1":
+                {
+                    "label": "Extruder End G-Code",
+                    "description": "End g-code to execute when switching away from this extruder.",
+                    "type": "str",
+                    "default_value": "G1 X{prime_tower_position_x_nep2d} Y{prime_tower_position_y_nep2d} E-100 F5000\nG92 E0",
+                    "settable_per_mesh": false,
+                    "settable_per_extruder": true,
+                    "settable_per_meshgroup": false,
+                    "settable_globally": false
+                },
+                "machine_extruder_end_code_2":
+                {
+                    "label": "Extruder End G-Code",
+                    "description": "End g-code to execute when switching away from this extruder.",
+                    "type": "str",
+                    "default_value": "G1 E-100 F3000\nG92 E0",
+                    "settable_per_mesh": false,
+                    "settable_per_extruder": true,
+                    "settable_per_meshgroup": false,
+                    "settable_globally": false
+                }
+            }
+}
