@@ -22,7 +22,7 @@
                     "default_value": "M104 S{material_print_temperature_preheat};预热热端\nM190 S{material_bed_temperature} ;等待热床加热\nM109 S{material_print_temperature} ;等待热端加热\nG28 ;home\nG1 Z0.8 F3000 ;Move Z Axis up\nG92 E0 ;Reset Extruder\nG1 X1.5 Y20 F5000.0 ;Move to start position\nG1 Y80.0 F400.0 E25 ;Draw the first line\nG1 X0.5 F5000.0 ;Move to side a little\nG1 Y20 F540.0 E45 ;Draw the second line\nG92 E0 ;Reset Extruder"
                     },
                   "machine_end_gcode" : {
-                    "default_value": "G91 ;Relative positionning\nG1 E-2 F2700 ;Retract a bit\nG1 E-15 Z0.2 F1000 ;Retract and raise Z\nG1 X5 Y5 F3000 ;Wipe out\nG1 Z10 ;Raise Z more\nG90 ;Absolute positionning\nG1 X0 Y{machine_depth} ;Present print\nM106 S0 ;Turn-off fan\nM104 S0 ;Turn-off hotend\nM140 S0 ;Turn-off bed\nM84 X Y E ;Disable all steppers but Z"
+                    "default_value": "G91 ;Relative positionning\nG1 E-2 F2700 ;Retract a bit\nG1 E-15 X5 Y5 Z3 F3000 ;Retract\nG90 ;Absolute positionning\nG1 X0 Y{machine_depth} ;Present print\nM106 S0 ;Turn-off fan\nM104 S0 ;Turn-off hotend\nM140 S0 ;Turn-off bed\nM84;Disable all steppers"
                     },
                   
                   "material_bed_temperature":{"value": "default_material_bed_temperature + 10"},
