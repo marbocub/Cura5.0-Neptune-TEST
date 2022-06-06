@@ -1,5 +1,5 @@
 {
-    "name":      "ELEGOO NEPTUNE 2",
+    "name":      "ELEGOO NEPTUNE X",
     "version":   2,
     "inherits":  "elegoo_base",
     "metadata":  {
@@ -9,7 +9,7 @@
                   "machine_extruder_trains":{"0": "elegoo_extruder_0"}
                   },
     "overrides": {
-                  "machine_name":   {"default_value": "ELEGOO NEPTUNE 2"},
+                  "machine_name":   {"default_value": "ELEGOO NEPTUNE X"},
                   "machine_width":  {"default_value": 235},
 				          "machine_depth":  {"default_value": 235},
                   "machine_height": {"default_value": 310},
