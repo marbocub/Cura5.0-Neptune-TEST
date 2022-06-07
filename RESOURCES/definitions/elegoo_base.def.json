@@ -204,6 +204,6 @@
           "infill_wall_line_count":{"default_value": 0},
           "cool_min_speed":{"value": "10"},
           "raft_airgap":{"default_value": 0.15},
-          "speed_slowdown_layers":{"value": "speed_print/25"}
+          "speed_slowdown_layers":{"value": "speed_print/30"}
   }
 }
