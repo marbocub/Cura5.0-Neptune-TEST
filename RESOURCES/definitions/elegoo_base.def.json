@@ -202,6 +202,7 @@
           "infill_overlap_mm":{"value": "0.5 * (infill_line_width + (wall_line_width_x if wall_line_count > 1 else wall_line_width_0)) * infill_overlap / 100 if infill_sparse_density < 89.999 and infill_pattern != 'concentric' else 0"},
           "min_infill_area":{"value": "30"},
           "infill_wall_line_count":{"default_value": 0},
-          "cool_min_speed":{"value": "10"}
+          "cool_min_speed":{"value": "10"},
+          "raft_airgap":{"default_value": 0.15}
   }
 }
