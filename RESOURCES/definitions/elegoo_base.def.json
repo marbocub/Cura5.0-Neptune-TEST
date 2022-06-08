@@ -39,6 +39,7 @@
         "generic_cpe_plus",
         "generic_cpe_175",
         "generic_cpe",
+        "generic_tpu",
         "generic_tpu_175",
         "generic_pp",
         "generic_pc",
@@ -203,9 +204,9 @@
           "min_infill_area":{"value": "30"},
           "infill_wall_line_count":{"default_value": 0},
           "cool_min_speed":{"value": "10"},
-          "raft_airgap":{"default_value": 0.3},
           "speed_slowdown_layers":{"value": "speed_print/30"},
-          "layer_0_z_overlap":{"value": "raft_airgap * 0.25"},
+          "raft_airgap":{"value": "layer_height_0 * initial_layer_line_width_factor / 100"},
+          "layer_0_z_overlap":{"value": "2 * raft_airgap - layer_height_0 - 0.05"},
           "raft_interface_thickness":{"value": "resolveOrValue('machine_nozzle_size') * 0.75"},
           "raft_speed":{"value": "speed_layer_0"}
   }
