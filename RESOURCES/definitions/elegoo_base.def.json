@@ -212,6 +212,9 @@
           "raft_interface_thickness":{"value": "resolveOrValue('machine_nozzle_size') * 0.75"},
           "raft_speed":{"value": "speed_layer_0*30/25"},
           "raft_surface_fan_speed":{"value": "cool_fan_speed"},
-          "raft_base_line_width":{"value": "machine_nozzle_size * 2"}
+          "raft_base_line_width":{"value": "machine_nozzle_size * 2"},
+          "draft_shield_enabled":{"value": "resolveOrValue('draft_shield_enabled') == 'false' if resolveOrValue('adhesion_type') == 'raft' else 'true'"},
+          "draft_shield_dist":{"enabled": "resolveOrValue('draft_shield_enabled') == 'true' or draft_shield_enabled"},
+          "draft_shield_height_limitation":{"enabled": "resolveOrValue('draft_shield_enabled') == 'true' or draft_shield_enabled"}
   }
 }
