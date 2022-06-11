@@ -110,15 +110,16 @@
          "material_standby_temperature":{"default_value": 150,"value": "max(-273.15, material_print_temperature - 0)"},
          "material_diameter":{"default_value": 1.75},
          "machine_nozzle_size":{"default_value": 0.4},
+         "wall_thickness":{"value":"wall_line_width_0 if magic_spiralize else line_width * 3"},
          "inset_direction":{"options": {"inside_out": "Inside To Outside","outside_in": "Outside To Inside"},"default_value": "inside_out"},
-         "alternate_extra_perimeter":{"default_value": true, "value": "'false' if infill_sparse_density > 50.01 else 'true'"},
+         "alternate_extra_perimeter":{"default_value": false},
          "skin_overlap": {"value": "8 if top_bottom_pattern != 'concentric' else 0"},
          "min_wall_line_width":{"value": "line_width * .85"},
          "retraction_hop":{"value": "layer_height if layer_height > 0.199 else 0.2"},
 
          "acceleration_enabled":{"default_value": false},
          "acceleration_print":{"default_value": 800,"enabled": "resolveOrValue('acceleration_enabled')"},
-         "speed_print":{"default_value": 80},
+         "speed_print":{"default_value": 50},
          "speed_infill":{"value": "speed_print"},
          "speed_wall_x":{"value": "speed_wall+10 if speed_infill <100.1 else speed_wall+20"},
          "speed_topbottom":{"value": "speed_wall+10 if speed_infill <100.1 else speed_wall+20"},
@@ -147,14 +148,14 @@
           "support_brim_enable":{"default_value": false,"value": "support_structure == 'normal' or support_structure == 'tree'"},
           "support_brim_width":{"default_value": 3 ,"value" : "6 if support_structure == 'tree' else line_width * initial_layer_line_width_factor * 0.03 " },
           "support_z_distance":{"value": "layer_height * 1.5","maximum_value_warning": "machine_nozzle_size * 2" },
-          "support_top_distance":{"value": "extruderValue(support_roof_extruder_nr if support_roof_enable else support_infill_extruder_nr, 'layer_height') + (layer_height if support_structure == 'tree' else 0)"},
+          "support_top_distance":{"value": "extruderValue(support_roof_extruder_nr if support_roof_enable else support_infill_extruder_nr, 'layer_height') + (0 if support_structure == 'tree' else 0)"},
           "support_bottom_distance":{"value": "extruderValue(support_bottom_extruder_nr if support_bottom_enable else support_infill_extruder_nr, 'support_z_distance') if support_type == 'everywhere' else 0"},
           "support_xy_overrides_z":{"default_value": "z_overrides_xy"},
           "support_xy_distance":{"value": "machine_nozzle_size * 1.7"},
           "support_xy_distance_overhang":{"value": "machine_nozzle_size * 1.2"},
           "support_join_distance":{"default_value": 2.0},
           "support_offset":{"default_value": 0},
-          "gradual_support_infill_steps":{"value": "1"},
+          "gradual_support_infill_steps":{"value": "0"},
           "support_roof_enable":{"default_value": true},
           "support_interface_enable":{"default_value": true},
           "support_interface_height":{"default_value": 1.0},
@@ -174,11 +175,9 @@
           
                             
           "adhesion_type":{"default_value": "brim"},
-          "brim_width":{"default_value": 3.5 },
+          "brim_width":{"default_value": 5 },
           "brim_gap":{"default_value": 0.15},
           "cool_fan_full_at_height":{"value": "layer_height_0 if resolveOrValue('adhesion_type') == 'raft' else resolveOrValue('layer_height_0')+0.4"},
-          "cool_fan_speed_0":{"value": "cool_fan_speed if resolveOrValue('adhesion_type') == 'raft' else 0"},
-
           "wall_0_inset":{"value": "((machine_nozzle_size - wall_line_width_0)/2 + wall_line_width_0 / 20)  if (wall_line_width_0 < machine_nozzle_size and not outer_inset_first) else (machine_nozzle_size / 20)"},
           "retraction_combing":{"value": "'no_outer_surfaces' if (any(extruderValues('skin_monotonic')) or any(extruderValues('ironing_enabled')) or (any(extruderValues('roofing_monotonic')) and any(extruderValues('roofing_layer_count')))) else 'infill'"},
           "retraction_combing_max_distance":{"value": "(infill_line_distance)*1.5 + 5  "},
@@ -213,8 +212,11 @@
           "raft_speed":{"value": "speed_layer_0*30/25"},
           "raft_surface_fan_speed":{"value": "cool_fan_speed"},
           "raft_base_line_width":{"value": "machine_nozzle_size * 2"},
-          "draft_shield_enabled":{"value": "resolveOrValue('draft_shield_enabled') == 'false' if resolveOrValue('adhesion_type') == 'raft' else 'true'"},
-          "draft_shield_dist":{"enabled": "resolveOrValue('draft_shield_enabled') == 'true' or draft_shield_enabled"},
-          "draft_shield_height_limitation":{"enabled": "resolveOrValue('draft_shield_enabled') == 'true' or draft_shield_enabled"}
+          
+          "cool_min_layer_time":{"value": "5"},
+          "cool_fan_speed":{"enabled": "resolveOrValue('cool_fan_enabled') == 'true' or cool_fan_enabled"},
+          "cool_fan_speed_min":{"enabled": "resolveOrValue('cool_fan_enabled') == 'true' or cool_fan_enabled"},
+          "cool_fan_speed_max":{"enabled": "resolveOrValue('cool_fan_enabled') == 'true' or cool_fan_enabled"},
+          "cool_fan_speed_0":{"value": "cool_fan_speed if resolveOrValue('adhesion_type') == 'raft' else 0","enabled": "resolveOrValue('cool_fan_enabled') == 'true' or cool_fan_enabled"}
   }
 }

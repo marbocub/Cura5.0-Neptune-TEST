@@ -147,13 +147,8 @@ Generic PLA 1.75mm profile. The data in this file may not be correct for your sp
             <setting key="print temperature">200</setting>
 			<setting key="print cooling">100</setting>
             <setting key="heated bed temperature">50</setting>
-            <setting key="wall thickness">1.2</setting>
-            <setting key="infill sparse density">15</setting>
-            <setting key="retraction speed">70</setting>
-            <setting key="retraction prime speed">70</setting>
-            <setting key="cool fan full at height">0.25</setting>
-            <setting key="cool min layer time">5</setting>
-            <setting key="standby temperature">=material_print_temperature</setting>
+            <setting key="retraction speed">45</setting>
+            <setting key="cool min layer time">10</setting>
         </machine>
 
     </settings>

@@ -92,7 +92,6 @@ Generic PETG 1.75mm profile. The data in this file may not be correct for your s
             <setting key="print temperature">235</setting>
 			<setting key="print cooling">100</setting>
             <setting key="heated bed temperature">80</setting>
-            <setting key="skirt brim speed">12</setting>
             <setting key="retraction speed">45</setting>
         </machine>
     </settings>

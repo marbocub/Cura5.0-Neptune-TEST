@@ -19,7 +19,7 @@
                   "machine_gcode_flavor": {"default_value": "Marlin"},
                   
                   "machine_start_gcode" : {
-                    "default_value": "M220 S100 ;进给速度100%\nM104 S{material_print_temperature_preheat};预热热端\nM190 S{material_bed_temperature} ;等待热床加热\nM109 S{material_print_temperature} ;等待热端加热\n;M302 P1\nG90\nG92 Z0 E0\n;G1 Z5 E-8 F1200\nG28 ;home\nG92 E0 ;Reset Extruder\nG1 Z0.8 F300\nG1 X1.5 Y20 F5000.0 ;Move to start position\nG1 Y80.0 F400.0 E30 ;Draw the first line\nG1 X0.5 F5000.0 ;Move to side a little\nG1 Y20 F540 E50 ;Draw the second line\nG92 E0 ;Reset Extruder"
+                    "default_value": ";ELEGOO NEPTUNE 3\nM220 S100 ;进给速度100%\nM104 S{material_print_temperature_preheat};预热热端\nM190 S{material_bed_temperature} ;等待热床加热\nM109 S{material_print_temperature} ;等待热端加热\nG90\nG92 Z0;\nG1 Z5 F100;先抬升再回家\nG28 ;home\n;M420 S1 Z50;注释启用渐进补偿高度50mm\nG92 E0 ;Reset Extruder\nG1 Z0.8 F300\nG1 X1.5 Y20 F5000.0 ;Move to start position\nG1 Y120.0 F500.0 E30 ;Draw the first line\nG1 X0.5 F1000.0 ;Move to side a little\nG1 Y20 F500 E45 ;Draw the second line\nG92 E0 ;Reset Extruder"
                     },
                   "machine_end_gcode" : {
                     "default_value": "G91 ;Relative positionning\nG1 E-2 F2700 ;Retract a bit\nG1 E-15 X5 Y5 Z3 F3000 ;Retract\nG90 ;Absolute positionning\nG1 X0 Y{machine_depth} ;Present print\nM106 S0 ;Turn-off fan\nM104 S0 ;Turn-off hotend\nM140 S0 ;Turn-off bed\nM84;Disable all steppers"
