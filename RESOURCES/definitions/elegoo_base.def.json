@@ -163,7 +163,7 @@
           "support_interface_density":{"default_value": 33.333},
           "support_interface_pattern":{"default_value": "lines"},
           "support_roof_pattern":{"value": "'grid'"},
-          "support_interface_offset":{"value": "-0.4"},
+          "support_interface_offset":{"value": "0.0"},
           "support_bottom_offset":{"value": "-0.4"},
           "support_use_towers":{"default_value": false},
           "support_tower_diameter":{"value": "5"},
