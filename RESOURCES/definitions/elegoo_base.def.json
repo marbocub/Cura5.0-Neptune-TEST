@@ -203,7 +203,7 @@
           "min_infill_area":{"value": "30"},
           "infill_wall_line_count":{"default_value": 0},
           "cool_min_speed":{"value": "10"},
-          "speed_slowdown_layers":{"value": "1 if initial_layer_line_width_factor==100 else speed_print/30"},
+          "speed_slowdown_layers":{"value": "0 if initial_layer_line_width_factor==100 else speed_print/30"},
           "raft_base_thickness":{"value": "resolveOrValue('machine_nozzle_size') * 0.75"},
           "raft_interface_thickness":{"value": "resolveOrValue('machine_nozzle_size') * 0.75"},
           "raft_speed":{"value": "speed_layer_0"},
