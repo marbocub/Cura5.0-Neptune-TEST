@@ -214,7 +214,7 @@
           "raft_speed":{"value": "30"},
           "raft_interface_speed":{"value": "0.6 * raft_speed"},
           "raft_base_speed":{"value": "0.4 * raft_speed"},
-          
+           
           "cool_min_layer_time":{"value": "5"},
           "cool_fan_speed":{"enabled": "resolveOrValue('cool_fan_enabled') == 'true' or cool_fan_enabled"},
           "cool_fan_speed_min":{"enabled": "resolveOrValue('cool_fan_enabled') == 'true' or cool_fan_enabled"},
