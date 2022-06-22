@@ -211,9 +211,9 @@
           "raft_surface_thickness":{"value": "resolveOrValue('machine_nozzle_size')*0.375"},
           "raft_surface_line_width":{"value": "machine_nozzle_size * 1.25"},
           "raft_base_line_spacing":{"value": "raft_base_line_width * 2"},
-          "raft_speed":{"value": "speed_layer_0 + 5"},
-          "raft_interface_speed":{"value": "0.5 * raft_speed"},
-          "raft_base_speed":{"value": "0.5 * raft_speed"},
+          "raft_speed":{"value": "30"},
+          "raft_interface_speed":{"value": "0.6 * raft_speed"},
+          "raft_base_speed":{"value": "0.4 * raft_speed"},
           
           "cool_min_layer_time":{"value": "5"},
           "cool_fan_speed":{"enabled": "resolveOrValue('cool_fan_enabled') == 'true' or cool_fan_enabled"},
