@@ -172,7 +172,7 @@
           "speed_support_bottom": {"value": "extruderValue(support_bottom_extruder_nr, 'speed_support_interface')"},
           
                             
-          "adhesion_type":{"default_value": "brim","settable_per_extruder": true},
+          "adhesion_type":{"default_value": "brim","settable_per_extruder": false},
           "brim_width":{"default_value": 5 },
           "brim_gap":{"default_value": 0.15},
           "cool_fan_full_at_height":{"value": "layer_height_0 if resolveOrValue('adhesion_type') == 'raft' else resolveOrValue('layer_height_0')+0.4"},
