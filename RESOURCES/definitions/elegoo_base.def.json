@@ -13,7 +13,7 @@
       "file_formats": "text/x-gcode",
       "platform": "elegoo_platform.3mf",
       "platform_texture": "elegoobackplate.png",
-      "platform_offset": [-2.2, 13.2, -31],
+      "platform_offset": [-2.2, 14.5, -31],
       "has_materials": true,
       "has_variants": false,
       "has_variant_materials": false,
