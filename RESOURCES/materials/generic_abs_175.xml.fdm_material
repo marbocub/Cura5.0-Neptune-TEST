@@ -105,6 +105,7 @@ Generic ABS 1.75mm profile. The data in this file may not be correct for your sp
             <setting key="heated bed temperature">80</setting>
             <setting key="retraction speed">45</setting>
             <setting key="draft shield enabled">true</setting>
+            <setting key="standby temperature">240</setting>
         </machine>
         
    </settings>
