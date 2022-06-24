@@ -19,8 +19,8 @@
                   "machine_height": {"default_value": 260},
                   "machine_head_with_fans_polygon": { "value":  [ [-55, 20], [55, 20], [55, -25], [-55, -25] ] },
                   "gantry_height": {"value": "260"},
-                   "machine_extruder_count": 
-                   { "default_value": 2 },
+                   "machine_extruder_count": { "default_value": 2 },
+                   "extruders_enabled_count":{ "default_value": 2 },
                    
                   "machine_gcode_flavor": {"default_value": "Marlin"},
                   
@@ -34,7 +34,27 @@
                   "material_bed_temperature":{"value": "default_material_bed_temperature + 5"},
                   "material_print_temperature":{"value": "default_material_print_temperature"},
                   "retraction_count_max":{"default_value": 200},
-                  "material_standby_temperature":{"value": "material_final_print_temperature"}
+                  "material_standby_temperature":{"value": "material_final_print_temperature","enabled": "extruders_enabled_count > 1 and machine_nozzle_temp_enabled"}
                   
+
+
+
+
+                  ,
+                "machine_always_write_active_tool":
+                {
+                    "label": "Always Write Active Tool",
+                    "description": "Write active tool after sending temp commands to inactive tool. Required for Dual Extruder printing with Smoothie or other firmware with modal tool commands.",
+                    "default_value": false,
+                    "type": "bool",
+                    "settable_per_mesh": false,
+                    "settable_per_extruder": false,
+                    "settable_per_meshgroup": false
+                }
+
+
+
+
+
                  }
 }
