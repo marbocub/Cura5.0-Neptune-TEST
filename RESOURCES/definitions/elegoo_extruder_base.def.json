@@ -26,7 +26,7 @@
                     "label": "Extruder Start G-Code",
                     "description": "Start g-code to execute when switching to this extruder.",
                     "type": "str",
-                    "default_value": "G1 E100 F1200\nG92 E0\n;Please do not change the upon code",
+                    "default_value": "G1 E100 F1200\nG92 E0",
                     "settable_per_mesh": false,
                     "settable_per_extruder": true,
                     "settable_per_meshgroup": false,
