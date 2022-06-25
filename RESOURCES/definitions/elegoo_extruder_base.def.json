@@ -64,6 +64,18 @@
                     "settable_per_extruder": true,
                     "settable_per_meshgroup": false,
                     "settable_globally": false
+                },
+                "machine_extruder_end_code_1_2":
+                {
+                    "label": "Extruder End G-Code",
+                    "description": "End g-code to execute when switching away from this extruder.",
+                    "type": "str",
+                    "default_value": "",
+                    "value":"machine_extruder_end_code_1 if resolveOrValue('prime_tower_enable') else machine_extruder_end_code_2",
+                    "settable_per_mesh": false,
+                    "settable_per_extruder": true,
+                    "settable_per_meshgroup": false,
+                    "settable_globally": false
                 }
             }
 }
