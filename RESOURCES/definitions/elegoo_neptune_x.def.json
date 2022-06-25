@@ -14,7 +14,6 @@
 				          "machine_depth":  {"default_value": 235},
                   "machine_height": {"default_value": 310},
                   "machine_head_with_fans_polygon": { "value":  [ [-55, 20], [55, 20], [55, -25], [-55, -25] ] },
-                  "gantry_height": {"value": "300"},
 
                   "machine_gcode_flavor": {"default_value": "Marlin"},
                   

@@ -15,10 +15,9 @@
     "overrides": {
                   "machine_name":   {"default_value": "ELEGOO NEPTUNE 2D"},
                   "machine_width":  {"default_value": 235},
-				          "machine_depth":  {"default_value": 235},
+				  "machine_depth":  {"default_value": 235},
                   "machine_height": {"default_value": 260},
                   "machine_head_with_fans_polygon": { "value":  [ [-55, 20], [55, 20], [55, -25], [-55, -25] ] },
-                  "gantry_height": {"value": "260"},
                    "machine_extruder_count": { "default_value": 2 },
                    "extruders_enabled_count":{ "default_value": 2 },
                    
