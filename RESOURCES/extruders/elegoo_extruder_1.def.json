@@ -12,10 +12,10 @@
         "material_diameter": { "default_value": 1.75 },
         "machine_nozzle_size": { "default_value": 0.4 },
         "machine_extruder_start_code": {
-            "value": "machine_extruder_start_code_1 if max(extruderValues('machine_extruder_count')) > 1 else machine_extruder_start_code_0"
+            "value": "machine_extruder_start_code_1"
             },
             "machine_extruder_end_code": {
-                "value": "machine_extruder_end_code_1_2 if max(extruderValues('machine_extruder_count')) > 1 else machine_extruder_end_code_0"
+                "value": "machine_extruder_end_code_1_2"
             }
 
 
