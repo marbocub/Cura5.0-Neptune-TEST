@@ -116,6 +116,7 @@
          "skin_overlap": {"value": "8 if top_bottom_pattern != 'concentric' else 0"},
          "min_wall_line_width":{"value": "line_width * .85"},
          "retraction_hop":{"value": "layer_height if layer_height > 0.199 else 0.2"},
+         "fill_outline_gaps": {"default_value": false},
 
          "acceleration_enabled":{"default_value": false},
          "acceleration_print":{"default_value": 800,"enabled": "resolveOrValue('acceleration_enabled')"},
