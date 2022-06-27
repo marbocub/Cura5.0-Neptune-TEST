@@ -122,7 +122,7 @@
          "acceleration_print":{"default_value": 800,"enabled": "resolveOrValue('acceleration_enabled')"},
          "speed_print":{"default_value": 50},
          "speed_infill":{"value": "speed_print"},
-         "speed_wall_x":{"value": "speed_wall+10 if speed_infill <100.1 else speed_wall+20"},
+         "speed_wall_x":{"value": "speed_wall"},
          "speed_topbottom":{"value": "speed_wall"},
          "speed_prime_tower":{"value": "70 if speed_print < 70.1 else 90 if speed_print > 100 else speed_print * 0.5+35"},
          "speed_travel":{"value": "90 if speed_print < 60.1 else speed_print * 0.5+75 if speed_print > 90 else speed_print+30"},
