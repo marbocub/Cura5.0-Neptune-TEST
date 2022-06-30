@@ -121,6 +121,7 @@
          "acceleration_enabled":{"default_value": false},
          "acceleration_print":{"default_value": 800,"enabled": "resolveOrValue('acceleration_enabled')"},
          "speed_print":{"default_value": 50},
+         "speed_wall":{"value": "speed_print / 2"},
          "speed_infill":{"value": "speed_print"},
          "speed_wall_x":{"value": "speed_wall"},
          "speed_topbottom":{"value": "speed_wall"},
@@ -131,6 +132,7 @@
          "speed_travel_layer_0": {"value": "70 if speed_layer_0 < 20 else 90 if speed_layer_0 > 40 else speed_layer_0+50"},
          "skirt_brim_speed":{"value": "speed_print_layer_0"},
          "speed_support": {"value": "speed_print if speed_wall > 0 and speed_wall < 40.01 else speed_wall + 40 "},
+         "speed_support_bottom": {"value": "extruderValue(support_bottom_extruder_nr, 'speed_support_interface')"},
          "skirt_brim_line_width":{"value": "line_width * 1.25","enabled": "resolveOrValue('adhesion_type') == 'skirt' or resolveOrValue('adhesion_type') == 'brim' or resolveOrValue('prime_tower_brim_enable') or resolveOrValue('draft_shield_enabled') or resolveOrValue('ooze_shield_enabled')"},
          "initial_layer_line_width_factor":{"value": "100.0 if resolveOrValue('adhesion_type') == 'raft' else 125"},
          "optimize_wall_printing_order":{"default_value": true },
@@ -171,7 +173,6 @@
           "support_material_flow":{"value": "material_flow * 0.95"},
           "minimum_support_area":{"default_value": 3},
           "minimum_interface_area": {"default_value": 10},
-          "speed_support_bottom": {"value": "extruderValue(support_bottom_extruder_nr, 'speed_support_interface')"},
           
                             
           "adhesion_type":{"default_value": "brim","settable_per_extruder": false},
