@@ -150,7 +150,7 @@
           "support_infill_angles":{"default_value": "[65]"},
           "support_brim_enable":{"default_value": false,"value": "support_structure == 'normal' or support_structure == 'tree'"},
           "support_brim_width":{"default_value": 3 ,"value" : "6 if support_structure == 'tree' else line_width * initial_layer_line_width_factor * 0.03 " },
-          "support_z_distance":{"value": "layer_height * 1.5 if support_roof_enable else layer_height","maximum_value_warning": "machine_nozzle_size * 2" },
+          "support_z_distance":{"value": "layer_height * 1.5 if (support_interface_enable and support_bottom_enable) or support_bottom_enable else layer_height","maximum_value_warning": "machine_nozzle_size * 2" },
           "support_top_distance":{"value": "extruderValue(support_roof_extruder_nr if support_roof_enable else support_infill_extruder_nr, 'layer_height') + (0 if support_structure == 'tree' else 0)"},
           "support_bottom_distance":{"value": "extruderValue(support_bottom_extruder_nr if support_bottom_enable else support_infill_extruder_nr, 'support_z_distance') if support_type == 'everywhere' else 0","maximum_value_warning": "machine_nozzle_size * 1.5"},
           "support_xy_overrides_z":{"default_value": "z_overrides_xy"},
