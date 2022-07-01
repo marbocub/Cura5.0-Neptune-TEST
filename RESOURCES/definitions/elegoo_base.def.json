@@ -113,7 +113,7 @@
          "wall_thickness":{"value":"wall_line_width_0 if magic_spiralize else line_width * 3"},
          "inset_direction":{"options": {"inside_out": "Inside To Outside","outside_in": "Outside To Inside"},"default_value": "inside_out"},
          "alternate_extra_perimeter":{"default_value": false},
-         "skin_overlap": {"value": "8 if top_bottom_pattern != 'concentric' else 0"},
+         "skin_overlap": {"value": "5 if top_bottom_pattern != 'concentric' else 0"},
          "min_wall_line_width":{"value": "line_width * .85"},
          "retraction_hop":{"value": "layer_height if layer_height > 0.199 else 0.2"},
          "fill_outline_gaps": {"default_value": false},
