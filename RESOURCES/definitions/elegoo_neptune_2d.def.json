@@ -3,7 +3,7 @@
     "version":   2,
     "inherits":  "elegoo_base",
     "metadata":  {
-                  "author": "Toylerrr&NARUTO",
+                  "author": "Toylerrr & NARUTO",
                   "visible": true,
                   "quality_definition": "elegoo_base",
                   "machine_extruder_trains":
