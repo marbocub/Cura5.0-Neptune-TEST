@@ -15,8 +15,6 @@
                   "machine_height": {"default_value": 310},
                   "machine_head_with_fans_polygon": { "value":  [ [-55, 20], [55, 20], [55, -25], [-55, -25] ] },
 
-                  "machine_gcode_flavor": {"default_value": "Marlin"},
-                  
                   "machine_start_gcode" : {
                     "default_value": ";ELEGOO NEPTUNE X\nM104 S{material_print_temperature_preheat};Preheat the hot end\nM190 S{material_bed_temperature} ;Wait for hot bed temperature\nM109 S{material_print_temperature} ;Wait for the hot end temperature\nG90\nG92 Z0;Erase Z value\nG28 ;home\nG1 Z0.6 F3000 ;Move Z Axis up\nG92 E0 ;Reset Extruder\nG1 X1.5 Y20 F5000.0 ;Move to start position\nG1 Y120.0 F600.0 E20 ;Draw the first line\nG1 X0.5 F1000.0 ;Move to side a little\nG1 Y20 F600.0 E40 ;Draw the second line\nG92 E0 ;Reset Extruder"
                   },

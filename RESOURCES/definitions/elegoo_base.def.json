@@ -102,6 +102,7 @@
 
 
   "overrides": {
+         "machine_gcode_flavor": {"default_value": "RepRap (Marlin/Sprinter)"},
          "machine_head_with_fans_polygon": { "value":  [ [-55, 20], [55, 20], [55, -25], [-55, -25] ] },
          "gantry_height": {"value": "machine_height-20"},
          "material_initial_print_temperature":{"value": "max(-273.15, material_print_temperature)"},

@@ -22,7 +22,6 @@
                    "layer_start_x":{"value": "machine_width"},
                    "layer_start_y":{"value": "machine_depth"},
                    
-                  "machine_gcode_flavor": {"default_value": "Marlin"},
                   "machine_use_extruder_offset_to_offset_coords":{"default_value": false},
                   
                   "machine_start_gcode" : 
