@@ -14,25 +14,8 @@
         "machine_extruder_start_code": {
             "value": "machine_extruder_start_code_1"
             },
-            "machine_extruder_end_code": {
-                "value": "machine_extruder_end_code_1_2"
+        "machine_extruder_end_code": {
+            "value": "machine_extruder_end_code_1_2"
             }
-
-
-
-
-    
-
-
-
-        
-
-
-
-
-
-
-
-
     }
 }

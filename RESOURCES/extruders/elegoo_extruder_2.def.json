@@ -14,8 +14,8 @@
         "machine_extruder_start_code": {
             "value": "machine_extruder_start_code_1 if max(extruderValues('machine_extruder_count')) > 1 else machine_extruder_start_code_0"
             },
-            "machine_extruder_end_code": {
-                "value": "machine_extruder_end_code_1_2 if max(extruderValues('machine_extruder_count')) > 1 else machine_extruder_end_code_0"
+        "machine_extruder_end_code": {
+            "value": "machine_extruder_end_code_1_2 if max(extruderValues('machine_extruder_count')) > 1 else machine_extruder_end_code_0"
             }
     }
 }
