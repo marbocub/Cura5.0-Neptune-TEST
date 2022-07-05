@@ -10,20 +10,9 @@
     },
     "settings":
     {
-                "machine_extruder_start_code_0":
-                {
-                    "label": "Extruder Start G-Code",
-                    "description": "Start g-code to execute when switching to this extruder.",
-                    "type": "str",
-                    "default_value": "",
-                    "settable_per_mesh": false,
-                    "settable_per_extruder": true,
-                    "settable_per_meshgroup": false,
-                    "settable_globally": false
-                },
                 "machine_extruder_start_code_1":
                 {
-                    "label": "Extruder Start G-Code",
+                    "label": "Neptune 2D-Extruder Start G-Code",
                     "description": "Start g-code to execute when switching to this extruder.",
                     "type": "str",
                     "default_value": "G1 E100 F1200\nG92 E0",
@@ -32,23 +21,12 @@
                     "settable_per_meshgroup": false,
                     "settable_globally": false
                 },
-                "machine_extruder_end_code_0":
-                {
-                    "label": "Extruder End G-Code",
-                    "description": "End g-code to execute when switching away from this extruder.",
-                    "type": "str",
-                    "default_value": "",
-                    "settable_per_mesh": false,
-                    "settable_per_extruder": true,
-                    "settable_per_meshgroup": false,
-                    "settable_globally": false
-                },
                 "machine_extruder_end_code_1":
                 {
-                    "label": "Extruder End G-Code",
+                    "label": "Neptune 2D-Extruder End G-Code-1",
                     "description": "End g-code to execute when switching away from this extruder.",
                     "type": "str",
-                    "default_value": "G1 X{prime_tower_position_x_nep2d} Y{prime_tower_position_y_nep2d} E-100 F5000\nG92 E0",
+                    "default_value": "G1 X{prime_tower_position_x} Y{prime_tower_position_y} E-100 F5000\nG92 E0",
                     "settable_per_mesh": false,
                     "settable_per_extruder": true,
                     "settable_per_meshgroup": false,
@@ -56,22 +34,10 @@
                 },
                 "machine_extruder_end_code_2":
                 {
-                    "label": "Extruder End G-Code",
+                    "label": "Neptune 2D-Extruder End G-Code-2",
                     "description": "End g-code to execute when switching away from this extruder.",
                     "type": "str",
                     "default_value": "G1 E-100 F3000\nG92 E0",
-                    "settable_per_mesh": false,
-                    "settable_per_extruder": true,
-                    "settable_per_meshgroup": false,
-                    "settable_globally": false
-                },
-                "machine_extruder_end_code_1_2":
-                {
-                    "label": "Extruder End G-Code",
-                    "description": "End g-code to execute when switching away from this extruder.",
-                    "type": "str",
-                    "default_value": "",
-                    "value":"machine_extruder_end_code_1 if resolveOrValue('prime_tower_enable') else machine_extruder_end_code_2",
                     "settable_per_mesh": false,
                     "settable_per_extruder": true,
                     "settable_per_meshgroup": false,

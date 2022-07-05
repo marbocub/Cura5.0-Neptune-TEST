@@ -49,65 +49,13 @@
         "generic_pvc_175",
         "generic_pp"
         ]
-  },
-  "settings":
-    {
-      "prime_tower_position_x_nep2d":
-                {
-                    "label": "Neptune 2D Change Nozzle X Position",
-                    "description": "Change the x position of the nozzle",
-                    "type": "float",
-                    "unit": "mm",
-                    "enabled": "resolveOrValue('prime_tower_enable')",
-                    "default_value": 200,
-                    "value": "prime_tower_position_x - (prime_tower_size / 2)",
-                    "maximum_value": "9999",
-                    "minimum_value": "0",
-                    "settable_per_mesh": false,
-                    "settable_per_extruder": false
-                },
-
-      "prime_tower_position_y_nep2d":
-                {
-                    "label": "Neptune 2D Change Nozzle Y Position",
-                    "description": "Change the y position of the nozzle",
-                    "type": "float",
-                    "unit": "mm",
-                    "enabled": "resolveOrValue('prime_tower_enable')",
-                    "default_value": 200,
-                    "value": "prime_tower_position_y + (prime_tower_size / 2)",
-                    "maximum_value": "9999",
-                    "minimum_value": "0",
-                    "settable_per_mesh": false,
-                    "settable_per_extruder": false
-                },
-        "material_print_temperature_preheat":
-                {
-                  "label": "Printing Temperature",
-                  "description": "The temperature used for printing.",
-                  "unit": "°C",
-                  "type": "float",
-                  "default_value": 150,
-                  "value": "material_print_temperature-60",
-                  "minimum_value": "-273.15",
-                  "minimum_value_warning": "0",
-                  "maximum_value_warning": "285",
-                  "maximum_value": "365",
-                  "enabled": "machine_nozzle_temp_enabled and not (material_flow_dependent_temperature)",
-                  "settable_per_mesh": false,
-                  "settable_per_extruder": true
-                }
- 
-    },
-
+        },
 
   "overrides": {
-         "machine_gcode_flavor": {"default_value": "RepRap (Marlin/Sprinter)"},
          "machine_head_with_fans_polygon": { "value":  [ [-55, 20], [55, 20], [55, -25], [-55, -25] ] },
          "gantry_height": {"value": "machine_height-20"},
-         "material_initial_print_temperature":{"value": "max(-273.15, material_print_temperature)"},
-         "material_final_print_temperature":{"value": "max(-273.15, material_print_temperature)"},
-         "material_standby_temperature":{"value": "material_print_temperature","resolve": "max(extruderValues('material_print_temperature'))"},
+         "material_initial_print_temperature":{"value": "material_print_temperature"},
+         "material_final_print_temperature":{"value": "material_print_temperature"},
          "machine_heated_bed":{"default_value": true},
          "material_diameter":{"default_value": 1.75},
          "machine_nozzle_size":{"default_value": 0.4},
@@ -120,7 +68,7 @@
          "fill_outline_gaps": {"default_value": false},
 
          "acceleration_enabled":{"default_value": false},
-         "acceleration_print":{"default_value": 800,"enabled": "resolveOrValue('acceleration_enabled')"},
+         "acceleration_print":{"default_value": 1000},
          "speed_print":{"default_value": 50},
          "speed_wall":{"value": "speed_print / 2"},
          "speed_infill":{"value": "speed_print"},
@@ -184,7 +132,7 @@
           "retraction_combing":{"value": "'no_outer_surfaces' if (any(extruderValues('skin_monotonic')) or any(extruderValues('ironing_enabled')) or (any(extruderValues('roofing_monotonic')) and any(extruderValues('roofing_layer_count')))) else 'no_outer_surfaces'"},
           "retraction_combing_max_distance":{"value": "(infill_line_distance)*1.5 + 5  "},
           "travel_avoid_supports":{"default_value": false},
-          "retraction_count_max":{"default_value": 150,"maximum_value_warning": "300"},
+          "retraction_count_max":{"default_value": 200,"maximum_value_warning": "300"},
           "wall_0_material_flow":{"default_value": 100,"value": "wall_material_flow"},
           "material_flow_layer_0":{"value": "wall_material_flow"},
           "infill_pattern":{"value": "'lines' if infill_sparse_density > 35 else 'grid' "},

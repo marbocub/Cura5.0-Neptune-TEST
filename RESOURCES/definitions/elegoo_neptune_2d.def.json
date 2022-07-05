@@ -23,6 +23,7 @@
                    "layer_start_y":{"value": "machine_depth"},
                    
                   "machine_use_extruder_offset_to_offset_coords":{"default_value": false},
+                  "machine_min_cool_heat_time_window":{"value": 50.0},
                   
                   "machine_start_gcode" : 
                   {"default_value": ";ELEGOO NEPTUNE 2D\n;Fool-proof Gcode\nG90\nG92 Z0;Erase Z value\nG28\nG90\nT1\nG92 E0\nG1 X1.5 Y20 Z1.0 E-10 F6000\nT0\nG92 E0\nG1 E-100 F1600\nT1\nG92 E0\nG1 Y200 E130 F250\nG91\nG1 E-{retraction_amount} F1600\nG1 E-101 F1600\nG90\nT0\nG92 E0\nG1 X0.5 E100 F3000\nG1 Y20 E230 F250\nG91\nG1 E-{retraction_amount} F1600\nG1 E-101 F1600\nG4 P5000\nG90\nT{extruder_nr}\nG92 E0\nG1 E{retraction_amount} F1600\nG92 E0"   
@@ -32,50 +33,30 @@
                   },
                   
                   "material_bed_temperature":{"value": "default_material_bed_temperature + 5"},
-                  "retraction_count_max":{"default_value": 200},
                   "initial_layer_line_width_factor":{"settable_per_extruder": false },
-                    
-                    
-                  "machine_always_write_active_tool":
-                  {"default_value": false,
-                    "settable_per_mesh": false,
-                    "settable_per_extruder": false,
-                    "settable_per_meshgroup": false
-                  },
-
 
                   "material_print_temperature":
-                  {   "value": "default_material_print_temperature",
-                      "resolve": "max(extruderValues('material_print_temperature'))",
+                  {   "resolve": "max(extruderValues('material_print_temperature'))",
                       "settable_per_extruder": false
                   },
                   "material_print_temperature_layer_0":
                   {
-                      "value": "material_print_temperature",
                       "resolve": "max(extruderValues('material_print_temperature'))",
                       "settable_per_extruder": false
                   },
                   "material_initial_print_temperature":
                   {
-                      "value": "max(-273.15, material_print_temperature)",
                       "resolve": "max(extruderValues('material_print_temperature'))",
                       "settable_per_extruder": false
                   },
                   "material_final_print_temperature":
                   {
-                      "value": "max(-273.15, material_print_temperature)",
                       "resolve": "max(extruderValues('material_print_temperature'))",
                       "settable_per_extruder": false
                   },
                   "material_standby_temperature":
-                  {   "value": "max(-273.15, material_print_temperature)",
-                      "resolve": "max(extruderValues('material_print_temperature'))",
+                  {   "resolve": "max(extruderValues('material_print_temperature'))",
                       "settable_per_extruder": false 
                   }
-
-
-
-
-
                  }
 }
