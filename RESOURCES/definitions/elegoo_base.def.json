@@ -56,6 +56,7 @@
          "gantry_height": {"value": "machine_height-20"},
          "material_initial_print_temperature":{"value": "material_print_temperature"},
          "material_final_print_temperature":{"value": "material_print_temperature"},
+         "material_print_temperature_layer_0":{"value": "0"},
          "machine_heated_bed":{"default_value": true},
          "material_diameter":{"default_value": 1.75},
          "machine_nozzle_size":{"default_value": 0.4},

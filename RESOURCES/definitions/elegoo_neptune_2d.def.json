@@ -33,30 +33,6 @@
                   },
                   
                   "material_bed_temperature":{"value": "default_material_bed_temperature + 5"},
-                  "initial_layer_line_width_factor":{"settable_per_extruder": false },
-
-                  "material_print_temperature":
-                  {   "resolve": "max(extruderValues('material_print_temperature'))",
-                      "settable_per_extruder": false
-                  },
-                  "material_print_temperature_layer_0":
-                  {
-                      "resolve": "max(extruderValues('material_print_temperature'))",
-                      "settable_per_extruder": false
-                  },
-                  "material_initial_print_temperature":
-                  {
-                      "resolve": "max(extruderValues('material_print_temperature'))",
-                      "settable_per_extruder": false
-                  },
-                  "material_final_print_temperature":
-                  {
-                      "resolve": "max(extruderValues('material_print_temperature'))",
-                      "settable_per_extruder": false
-                  },
-                  "material_standby_temperature":
-                  {   "resolve": "max(extruderValues('material_print_temperature'))",
-                      "settable_per_extruder": false 
-                  }
+                  "initial_layer_line_width_factor":{"settable_per_extruder": false }
                  }
 }
