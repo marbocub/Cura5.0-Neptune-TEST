@@ -11,7 +11,7 @@
     "overrides": {
                   "machine_name":   {"default_value": "ELEGOO NEPTUNE"},
                   "machine_width":  {"default_value": 210},
-				          "machine_depth":  {"default_value": 210},
+                  "machine_depth":  {"default_value": 210},
                   "machine_height": {"default_value": 200},
                   "machine_head_with_fans_polygon": { "value":  [ [-50, 20], [50, 20], [50, -25], [-50, -25] ] },
 
