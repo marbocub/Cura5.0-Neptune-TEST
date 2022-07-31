@@ -125,7 +125,7 @@
           "minimum_interface_area": {"default_value": 10},
           
                             
-          "adhesion_type":{"default_value": "brim","settable_per_extruder": false},
+          "adhesion_type":{"default_value": "brim"},
           "brim_width":{"default_value": 5 },
           "brim_gap":{"default_value": 0.1},
           "cool_fan_full_at_height":{"value": "layer_height_0 if resolveOrValue('adhesion_type') == 'raft' else resolveOrValue('layer_height_0')+0.4"},

@@ -33,6 +33,7 @@
                   },
                   
                   "material_bed_temperature":{"value": "default_material_bed_temperature + 5"},
-                  "initial_layer_line_width_factor":{"settable_per_extruder": false }
+                  "initial_layer_line_width_factor":{"settable_per_extruder": false },
+                  "material_print_temperature":{"resolve": "max(extruderValues('default_material_print_temperature'))","settable_per_extruder": false}
                  }
 }
