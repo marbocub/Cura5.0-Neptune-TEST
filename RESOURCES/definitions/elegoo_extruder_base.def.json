@@ -12,7 +12,7 @@
     {
                 "machine_extruder_start_code_1":
                 {
-                    "label": "Neptune 2D-Extruder Start G-Code",
+                    "label": "Neptune 2D-Extruder Start G-Code-1",
                     "description": "Start g-code to execute when switching to this extruder.",
                     "type": "str",
                     "default_value": "G1 E100 F1200\nG92 E0",
