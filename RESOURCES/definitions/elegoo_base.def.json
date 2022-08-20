@@ -42,7 +42,6 @@
         "generic_tpu",
         "generic_pp",
         "generic_pc",
-        "generic_pc_175",
         "generic_pvc",
         "generic_pva",
         "generic_pva_175",

@@ -1,0 +1,18 @@
+{
+    "name":      "ELEGOO NEPTUNE 3 Plus",
+    "version":   2,
+    "inherits":  "elegoo_neptune_3pro",
+    "metadata":  {
+                  "author": "NARUTO",
+                  "visible": true,
+                  "quality_definition": "elegoo_base",
+                  "machine_extruder_trains":{"0": "elegoo_extruder_0"}
+                 },
+    "overrides": {
+                  "machine_name":   {"default_value": "ELEGOO NEPTUNE 3 Plus"},
+                  "machine_width":  {"default_value": 330},
+                  "machine_depth":  {"default_value": 330},
+                  "machine_height": {"default_value": 400}
+
+                 }
+}
