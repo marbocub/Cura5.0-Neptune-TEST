@@ -91,7 +91,7 @@
           "z_seam_corner":{"default_value": "z_seam_corner_weighted"},
           "prime_tower_enable":{"enabled": "extruders_enabled_count > 1","default_value": true},
           "extruder_prime_pos_abs":{"default_value": false},
-          
+
           "support_enable":{"default_value": false},
           "support_structure":{"default_value": "normal"},
           "support_angle":{"value": "50"},
@@ -123,8 +123,7 @@
           "support_material_flow":{"value": "material_flow * 0.95"},
           "minimum_support_area":{"default_value": 3},
           "minimum_interface_area": {"default_value": 10},
-          
-                            
+
           "adhesion_type":{"default_value": "brim"},
           "brim_width":{"default_value": 5 },
           "brim_gap":{"default_value": 0.1},
@@ -166,7 +165,7 @@
           "raft_speed":{"value": "30"},
           "raft_interface_speed":{"value": "0.6 * raft_speed"},
           "raft_base_speed":{"value": "0.4 * raft_speed"},
-           
+
           "cool_min_layer_time":{"value": "5"},
           "cool_fan_speed":{"enabled": "resolveOrValue('cool_fan_enabled') == 'true' or cool_fan_enabled"},
           "cool_fan_speed_min":{"enabled": "resolveOrValue('cool_fan_enabled') == 'true' or cool_fan_enabled"},

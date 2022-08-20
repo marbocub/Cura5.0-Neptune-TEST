@@ -26,7 +26,6 @@
                   
                   "material_bed_temperature":{"value": "default_material_bed_temperature + 5"}
                   
-
-
                  }
 }
+
